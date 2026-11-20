@@ -1,0 +1,869 @@
+# Pages CMS configuration (https://pagescms.org/docs)
+media:
+  input: assets/uploads
+  output: /assets/uploads
+content:
+- name: settings
+  label: الإعدادات العامة (روابط، أرقام، نموذج)
+  type: file
+  path: _data/settings.yml
+  format: yaml
+  fields:
+  - name: store_url
+    label: رابط المتجر
+    type: string
+  - name: whatsapp
+    label: رقم واتساب الدولي (بدون +)
+    type: string
+  - name: phone
+    label: الجوال
+    type: string
+  - name: phone2
+    label: جوال ثانٍ
+    type: string
+  - name: email
+    label: البريد
+    type: string
+  - name: instagram
+    label: رابط انستقرام
+    type: string
+  - name: tiktok
+    label: رابط تيك توك
+    type: string
+  - name: maps_url
+    label: رابط الموقع على الخريطة
+    type: string
+  - name: address
+    label: العنوان
+    type: object
+    fields:
+    - name: ar
+      label: عربي
+      type: string
+    - name: en
+      label: English
+      type: string
+  - name: cr
+    label: السجل التجاري
+    type: string
+  - name: formspree_id
+    label: رمز نموذج Formspree
+    type: string
+    description: 'مثال: xyzabcd. إذا تُرك فارغاً يختفي النموذج وتبقى أزرار واتساب والبريد'
+  - name: deck_pdf
+    label: ملف العرض PDF
+    type: file
+  - name: show_prices
+    label: إظهار الأسعار في الصفحة
+    type: boolean
+- name: content
+  label: محتوى الصفحة (عربي وإنجليزي)
+  type: file
+  path: _data/content.yml
+  format: yaml
+  fields:
+  - name: seo
+    label: محركات البحث
+    type: object
+    fields:
+    - name: title
+      label: عنوان الصفحة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: description
+      label: الوصف
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+  - name: ui
+    label: نصوص الأزرار والقوائم
+    type: object
+    fields:
+    - name: nav_services
+      label: 'قائمة: الخدمات'
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: nav_packages
+      label: 'قائمة: الباقات'
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: nav_how
+      label: 'قائمة: كيف نعمل'
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: nav_contact
+      label: 'قائمة: تواصل'
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: store
+      label: زر المتجر
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: lang_switch
+      label: زر تغيير اللغة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: from
+      label: كلمة «يبدأ من»
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: currency
+      label: العملة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: monthly
+      label: كلمة «شهرياً»
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: annual
+      label: كلمة «بعقد سنوي»
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: request_quote
+      label: زر «اطلب عرضاً»
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: whatsapp
+      label: زر واتساب
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: download_deck
+      label: رابط تحميل العرض
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: vat_note
+      label: ملاحظة الأسعار
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: wa_message
+      label: بداية رسالة واتساب الجاهزة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: clients_title
+      label: عنوان شعارات العملاء
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: testimonials_title
+      label: عنوان آراء الشركاء
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: rights
+      label: حقوق النشر
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+  - name: hero
+    label: الواجهة الرئيسية
+    type: object
+    fields:
+    - name: eyebrow
+      label: السطر الصغير
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: title
+      label: العنوان الرئيسي
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    - name: subtitle
+      label: الوصف
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    - name: cta_primary
+      label: الزر الأول
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: cta_secondary
+      label: زر المتجر
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: segments_label
+      label: عنوان الجهات
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: background
+      label: صورة الخلفية
+      type: image
+  - name: stats
+    label: الأرقام
+    type: object
+    fields:
+    - name: value
+      label: الرقم
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: label
+      label: الوصف
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    list: true
+    description: اتركوها فارغة لإخفاء القسم
+  - name: about
+    label: من نحن
+    type: object
+    fields:
+    - name: eyebrow
+      label: السطر الصغير
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: title
+      label: العنوان
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: text
+      label: النص
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    - name: pillars
+      label: الركائز الثلاث
+      type: object
+      fields:
+      - name: title
+        label: العنوان
+        type: object
+        fields:
+        - name: ar
+          label: عربي
+          type: string
+        - name: en
+          label: English
+          type: string
+      - name: text
+        label: النص
+        type: object
+        fields:
+        - name: ar
+          label: عربي
+          type: text
+        - name: en
+          label: English
+          type: text
+      - name: image
+        label: الصورة
+        type: image
+      list: true
+  - name: segments_title
+    label: عنوان قسم الجهات
+    type: object
+    fields:
+    - name: ar
+      label: عربي
+      type: string
+    - name: en
+      label: English
+      type: string
+  - name: segments
+    label: الجهات
+    type: object
+    fields:
+    - name: key
+      label: رمز ثابت (لا يُغيّر)
+      type: string
+    - name: title
+      label: الاسم
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: offers
+      label: ما نقدمه
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+      list: true
+    - name: value
+      label: القيمة لهم
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    - name: image
+      label: الصورة
+      type: image
+    list: true
+  - name: products_title
+    label: عنوان المنتجات
+    type: object
+    fields:
+    - name: ar
+      label: عربي
+      type: string
+    - name: en
+      label: English
+      type: string
+  - name: products
+    label: المنتجات المميزة
+    type: object
+    fields:
+    - name: name
+      label: الاسم
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: desc
+      label: الوصف
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: price
+      label: يبدأ من (ريال)
+      type: number
+    - name: image
+      label: الصورة
+      type: image
+    list: true
+  - name: events_from
+    label: سطر تنسيق الفعاليات
+    type: object
+    fields:
+    - name: text
+      label: النص
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: price
+      label: يبدأ من (ريال)
+      type: number
+  - name: packages_title
+    label: عنوان الباقات
+    type: object
+    fields:
+    - name: ar
+      label: عربي
+      type: string
+    - name: en
+      label: English
+      type: string
+  - name: packages
+    label: باقات الاشتراك
+    type: object
+    fields:
+    - name: name
+      label: الاسم
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: tag
+      label: الوسم
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: monthly
+      label: السعر الشهري (ريال)
+      type: number
+    - name: annual
+      label: الشهري بعقد سنوي (ريال)
+      type: number
+    - name: featured
+      label: باقة مميزة؟
+      type: boolean
+    - name: features
+      label: المزايا
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+      list: true
+    list: true
+  - name: process_title
+    label: عنوان خطوات العمل
+    type: object
+    fields:
+    - name: ar
+      label: عربي
+      type: string
+    - name: en
+      label: English
+      type: string
+  - name: process
+    label: خطوات العمل
+    type: object
+    fields:
+    - name: title
+      label: العنوان
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: text
+      label: النص
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    list: true
+  - name: commitments_title
+    label: عنوان الالتزامات
+    type: object
+    fields:
+    - name: ar
+      label: عربي
+      type: string
+    - name: en
+      label: English
+      type: string
+  - name: commitments
+    label: الالتزامات
+    type: object
+    fields:
+    - name: title
+      label: العنوان
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: text
+      label: النص
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    list: true
+  - name: impact_title
+    label: عنوان الأثر
+    type: object
+    fields:
+    - name: ar
+      label: عربي
+      type: string
+    - name: en
+      label: English
+      type: string
+  - name: impact
+    label: الأثر المحلي
+    type: object
+    fields:
+    - name: title
+      label: العنوان
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: text
+      label: النص
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    list: true
+  - name: clients
+    label: شعارات العملاء (بموافقتهم)
+    type: object
+    fields:
+    - name: name
+      label: اسم الجهة
+      type: string
+    - name: logo
+      label: الشعار
+      type: image
+    list: true
+    description: القسم يظهر تلقائياً عند إضافة أول شعار
+  - name: testimonials
+    label: آراء الشركاء
+    type: object
+    fields:
+    - name: quote
+      label: الرأي
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    - name: author
+      label: الاسم والجهة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    list: true
+    description: القسم يظهر تلقائياً عند إضافة أول رأي
+  - name: contact
+    label: قسم التواصل والنموذج
+    type: object
+    fields:
+    - name: title
+      label: العنوان
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: text
+      label: النص
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: text
+      - name: en
+        label: English
+        type: text
+    - name: f_name
+      label: حقل الاسم
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_org
+      label: حقل الجهة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_type
+      label: حقل نوع الجهة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_city
+      label: حقل المدينة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_phone
+      label: حقل الجوال
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_email
+      label: حقل البريد
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_message
+      label: حقل الرسالة
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_submit
+      label: زر الإرسال
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_success
+      label: رسالة النجاح
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_error
+      label: رسالة الخطأ
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
+    - name: f_other
+      label: خيار «أخرى»
+      type: object
+      fields:
+      - name: ar
+        label: عربي
+        type: string
+      - name: en
+        label: English
+        type: string
