@@ -6,7 +6,8 @@
 <html lang="{{ L }}" dir="{{ dir }}" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
 <title>{{ c.seo.title[L] }}</title>
 <meta name="description" content="{{ c.seo.description[L] | escape }}">
 <link rel="canonical" href="https://saqaljori.sa{% if L == 'en' %}/en/{% else %}/{% endif %}">
@@ -42,7 +43,7 @@
       <a href="#contact">{{ c.ui.nav_contact[L] }}</a>
       <a class="hdr__lang" href="{{ other }}" hreflang="{% if L == 'en' %}ar{% else %}en{% endif %}">{{ c.ui.lang_switch[L] }}</a>
     </nav>
-    <a class="btn btn--gold hdr__store" href="{{ s.store_url }}">{{ c.ui.store[L] }} <span aria-hidden="true">↗</span></a>
+    <a class="btn btn--gold hdr__store" href="{{ s.store_url }}">{{ c.ui.store[L] }} <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
     <button class="hdr__menu" id="menuBtn" aria-label="menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
   </div>
 </header>
@@ -244,10 +245,10 @@
         <a class="btn btn--ghost btn--lg" href="mailto:{{ s.email }}">{{ s.email }}</a>
       </div>
       <ul class="contact__list">
-        {%- if s.deck_pdf and s.deck_pdf != "" %}<li><a href="{{ s.deck_pdf }}" download>⤓ {{ c.ui.download_deck[L] }}</a></li>{% endif %}
-        <li><a href="{{ s.store_url }}">↗ {{ s.store_url | remove: "https://" }}</a></li>
-        <li><a href="{{ s.maps_url }}" target="_blank" rel="noopener">⌖ {{ s.address[L] }}</a></li>
-        {%- if s.phone2 and s.phone2 != "" %}<li><a href="tel:{{ s.phone2 }}">☏ {{ s.phone2 }}</a></li>{% endif %}
+        {%- if s.deck_pdf and s.deck_pdf != "" %}<li><a href="{{ s.deck_pdf }}" download><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>{{ c.ui.download_deck[L] }}</a></li>{% endif %}
+        <li><a href="{{ s.store_url }}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>{{ s.store_url | remove: "https://" }}</a></li>
+        <li><a href="{{ s.maps_url }}" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>{{ s.address[L] }}</a></li>
+        {%- if s.phone2 and s.phone2 != "" %}<li><a href="tel:{{ s.phone2 }}" dir="ltr"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>{{ s.phone2 }}</a></li>{% endif %}
       </ul>
     </div>
     {%- if s.formspree_id and s.formspree_id != "" %}
