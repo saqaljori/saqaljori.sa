@@ -1,8 +1,7 @@
-# الإعدادات العامة — تُعدّل من saqaljori.sa/admin (Pages CMS)
 store_url: https://shop.saqaljori.sa
-whatsapp: '966564347555'
-phone: '0564347555'
-phone2: 0564348555
+whatsapp: "966564347555"
+phone: "0564347555"
+phone2: "0564348555"
 email: info@saqaljori.sa
 instagram: https://www.instagram.com/saqaljori.sa
 tiktok: https://www.tiktok.com/@saqaljori.sa
@@ -10,7 +9,7 @@ maps_url: https://maps.app.goo.gl/ETVzrGWbc5diyunC6
 address:
   ar: حي المنسك، أبها، منطقة عسير
   en: Al-Manssak District, Abha, Asir
-cr: '7038167453'
-formspree_id: ''
+cr: "7038167453"
+formspree_id: xoednqwv
 deck_pdf: /assets/files/SaqAljori_Partnerships_Deck.pdf
 show_prices: true
