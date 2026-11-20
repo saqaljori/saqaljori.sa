@@ -1,0 +1,8 @@
+# Jekyll config — GitHub Pages builds this site automatically
+title: SAQ ALJORI | ساق الجوري
+url: https://saqaljori.sa
+lang: ar
+markdown: kramdown
+exclude:
+  - README.md
+  - LICENSE

@@ -1,0 +1,299 @@
+{%- assign L = page.lang | default: "ar" -%}
+{%- assign c = site.data.content -%}
+{%- assign s = site.data.settings -%}
+{%- if L == "en" -%}{%- assign dir = "ltr" -%}{%- assign other = "/" -%}{%- else -%}{%- assign dir = "rtl" -%}{%- assign other = "/en/" -%}{%- endif -%}
+<!doctype html>
+<html lang="{{ L }}" dir="{{ dir }}" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ c.seo.title[L] }}</title>
+<meta name="description" content="{{ c.seo.description[L] | escape }}">
+<link rel="canonical" href="https://saqaljori.sa{% if L == 'en' %}/en/{% else %}/{% endif %}">
+<link rel="alternate" hreflang="ar" href="https://saqaljori.sa/">
+<link rel="alternate" hreflang="en" href="https://saqaljori.sa/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ c.seo.title[L] | escape }}">
+<meta property="og:description" content="{{ c.seo.description[L] | escape }}">
+<meta property="og:image" content="https://saqaljori.sa/assets/img/og.jpg">
+<meta property="og:url" content="https://saqaljori.sa{% if L == 'en' %}/en/{% else %}/{% endif %}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#151311">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Florist","name":"SAQ ALJORI ساق الجوري","url":"https://saqaljori.sa","email":"{{ s.email }}","telephone":"+{{ s.whatsapp }}","address":{"@type":"PostalAddress","addressLocality":"Abha","addressRegion":"Asir","addressCountry":"SA"},"sameAs":["{{ s.instagram }}","{{ s.tiktok }}","{{ s.store_url }}"]}</script>
+</head>
+<body class="lang-{{ L }}">
+
+<header class="hdr" id="top">
+  <div class="wrap hdr__in">
+    <a class="hdr__logo" href="{% if L == 'en' %}/en/{% else %}/{% endif %}" aria-label="SAQ ALJORI">
+      <img class="logo-dark" src="/assets/img/logo-ondark.svg" alt="ساق الجوري SAQ ALJORI" width="170" height="54">
+      <img class="logo-light" src="/assets/img/logo.svg" alt="" width="170" height="54" aria-hidden="true">
+    </a>
+    <nav class="hdr__nav" id="nav" aria-label="main">
+      <a href="#services">{{ c.ui.nav_services[L] }}</a>
+      {%- if s.show_prices %}<a href="#packages">{{ c.ui.nav_packages[L] }}</a>{% endif %}
+      <a href="#how">{{ c.ui.nav_how[L] }}</a>
+      <a href="#contact">{{ c.ui.nav_contact[L] }}</a>
+      <a class="hdr__lang" href="{{ other }}" hreflang="{% if L == 'en' %}ar{% else %}en{% endif %}">{{ c.ui.lang_switch[L] }}</a>
+    </nav>
+    <a class="btn btn--gold hdr__store" href="{{ s.store_url }}">{{ c.ui.store[L] }} <span aria-hidden="true">↗</span></a>
+    <button class="hdr__menu" id="menuBtn" aria-label="menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" style="--hero-bg:url('{{ c.hero.background | default: "/assets/img/hero-mountains.jpg" }}')">
+  <div class="hero__fog hero__fog--1" aria-hidden="true"></div>
+  <div class="hero__fog hero__fog--2" aria-hidden="true"></div>
+  <div class="wrap hero__in">
+    <img class="hero__rose" src="/assets/img/rose.svg" alt="" width="54" height="118" aria-hidden="true">
+    <p class="eyebrow eyebrow--light">{{ c.hero.eyebrow[L] }}</p>
+    <h1 class="hero__title">{{ c.hero.title[L] }}</h1>
+    <p class="hero__sub">{{ c.hero.subtitle[L] }}</p>
+    <div class="hero__cta">
+      <a class="btn btn--gold btn--lg" href="#contact">{{ c.hero.cta_primary[L] }}</a>
+      <a class="btn btn--ghost btn--lg" href="{{ s.store_url }}">{{ c.hero.cta_secondary[L] }}</a>
+    </div>
+    <div class="hero__segs">
+      <span>{{ c.hero.segments_label[L] }}</span>
+      {%- for seg in c.segments %}<a href="#seg-{{ seg.key }}">{{ seg.title[L] }}</a>{% endfor %}
+    </div>
+  </div>
+  <div class="qatt" aria-hidden="true"></div>
+</section>
+
+{%- if c.stats and c.stats.size > 0 %}
+<section class="stats" aria-label="stats">
+  <div class="wrap stats__grid">
+    {%- for st in c.stats %}
+    <div class="stat reveal"><b>{{ st.value[L] }}</b><span>{{ st.label[L] }}</span></div>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
+<!-- ============ ABOUT ============ -->
+<section class="about sec">
+  <div class="wrap about__grid">
+    <div class="reveal">
+      <p class="eyebrow">{{ c.about.eyebrow[L] }}</p>
+      <h2 class="h2">{{ c.about.title[L] }}</h2>
+      <p class="lead">{{ c.about.text[L] }}</p>
+    </div>
+    <div class="pillars">
+      {%- for p in c.about.pillars %}
+      <article class="pillar reveal pillar--{{ forloop.index }}">
+        <div class="pillar__img"{% if p.image and p.image != "" %} style="background-image:url('{{ p.image }}')"{% endif %}>
+          {%- unless p.image and p.image != "" %}
+          {%- if forloop.index == 1 %}<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M12 2v2M12 12v2M6 8H4M20 8h-2M7.8 3.8l1.4 1.4M14.8 10.8l1.4 1.4M7.8 12.2l1.4-1.4M14.8 5.2l1.4-1.4M12 14v8M12 19c-2-2.5-5-2.5-6-1.5 2 .8 4 1.5 6 1.5zM12 17.5c2-2.5 5-2.5 6-1.5-2 .8-4 1.5-6 1.5z"/></svg>
+          {%- elsif forloop.index == 2 %}<svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 11h18M8 7V5h8v2M7 15h4"/></svg>
+          {%- else %}<svg viewBox="0 0 24 24"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-6h6v6M3 21h18"/></svg>{% endif %}
+          {%- endunless %}
+        </div>
+        <div><h3>{{ p.title[L] }}</h3><p>{{ p.text[L] }}</p></div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEGMENTS ============ -->
+<section class="sec sec--ivory" id="services">
+  <div class="wrap">
+    <h2 class="h2 center reveal">{{ c.segments_title[L] }}</h2>
+    <div class="segs">
+      {%- for seg in c.segments %}
+      {%- capture wa %}{{ c.ui.wa_message[L] }} {{ seg.title[L] }}{% endcapture %}
+      <article class="seg reveal" id="seg-{{ seg.key }}">
+        <div class="seg__img seg__img--{{ seg.key }}"{% if seg.image and seg.image != "" %} style="background-image:url('{{ seg.image }}')"{% endif %}>
+          {%- unless seg.image and seg.image != "" %}
+          {%- case seg.key %}
+          {%- when "hotels" %}<svg viewBox="0 0 24 24"><path d="M4 21V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v16M2 21h20M9 8h2M13 8h2M9 12h2M13 12h2M10 21v-4h4v4"/></svg>
+          {%- when "government" %}<svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18M3 18h18"/></svg>
+          {%- when "hospitals" %}<svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-9.2-9A5 5 0 0 1 12 6.5 5 5 0 0 1 21.2 12C19 16.6 12 21 12 21z"/><path d="M12 10v5M9.5 12.5h5"/></svg>
+          {%- else %}<svg viewBox="0 0 24 24"><path d="M4 21V11a8 8 0 0 1 16 0v10M8 21v-9a4 4 0 0 1 8 0v9M2 21h20"/></svg>
+          {%- endcase %}
+          {%- endunless %}
+          <h3>{{ seg.title[L] }}</h3>
+        </div>
+        <div class="seg__body">
+          <ul class="ticks">{% for o in seg.offers %}<li>{{ o[L] }}</li>{% endfor %}</ul>
+          <p class="seg__value">{{ seg.value[L] }}</p>
+          <div class="seg__cta">
+            <a class="btn btn--dark" href="#contact" data-seg="{{ seg.key }}">{{ c.ui.request_quote[L] }}</a>
+            <a class="btn btn--line" href="https://wa.me/{{ s.whatsapp }}?text={{ wa | strip | url_encode }}" target="_blank" rel="noopener">{{ c.ui.whatsapp[L] }}</a>
+          </div>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <h2 class="h2 center reveal">{{ c.products_title[L] }}</h2>
+    <div class="prods">
+      {%- for p in c.products %}
+      <article class="prod reveal">
+        <div class="prod__img{% unless p.image and p.image != '' %} prod__img--icon{% endunless %}">
+          {%- if p.image and p.image != "" %}<img src="{{ p.image }}" alt="{{ p.name[L] | escape }}" width="640" height="780">
+          {%- else %}<svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4"/><path d="M5 12v9h14v-9M12 8v13M12 8c-2-4-6-4-6-1.5S10 8 12 8zm0 0c2-4 6-4 6-1.5S14 8 12 8z"/></svg>{% endif %}
+        </div>
+        <h3>{{ p.name[L] }}</h3>
+        <p>{{ p.desc[L] }}</p>
+        {%- if s.show_prices and p.price %}<div class="price"><small>{{ c.ui.from[L] }}</small> <b data-num>{{ p.price }}</b> <small>{{ c.ui.currency[L] }}</small></div>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+    {%- if s.show_prices and c.events_from.price %}
+    <p class="events-line reveal">{{ c.events_from.text[L] }} · {{ c.ui.from[L] }} <b data-num>{{ c.events_from.price }}</b> {{ c.ui.currency[L] }}</p>
+    {%- endif %}
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+{%- if s.show_prices %}
+<section class="sec sec--mist" id="packages">
+  <div class="wrap">
+    <h2 class="h2 center reveal">{{ c.packages_title[L] }}</h2>
+    <div class="pkgs">
+      {%- for p in c.packages %}
+      <article class="pkg reveal{% if p.featured %} pkg--featured{% endif %}">
+        <span class="pkg__tag">{{ p.tag[L] }}</span>
+        <h3>{{ p.name[L] }}</h3>
+        <div class="pkg__price"><small>{{ c.ui.from[L] }}</small> <b data-num>{{ p.monthly }}</b> <small>{{ c.ui.currency[L] }} {{ c.ui.monthly[L] }}</small></div>
+        {%- if p.annual %}<p class="pkg__annual">{{ c.ui.annual[L] }}: <span data-num>{{ p.annual }}</span> {{ c.ui.currency[L] }} {{ c.ui.monthly[L] }}</p>{% endif %}
+        <ul class="ticks">{% for f in p.features %}<li>{{ f[L] }}</li>{% endfor %}</ul>
+        <a class="btn {% if p.featured %}btn--gold{% else %}btn--dark{% endif %}" href="#contact">{{ c.ui.request_quote[L] }}</a>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="note center">{{ c.ui.vat_note[L] }}</p>
+  </div>
+</section>
+{%- endif %}
+
+<!-- ============ PROCESS ============ -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <h2 class="h2 center reveal">{{ c.process_title[L] }}</h2>
+    <ol class="steps">
+      {%- for st in c.process %}
+      <li class="step reveal"><span class="step__n">{{ forloop.index }}</span><h3>{{ st.title[L] }}</h3><p>{{ st.text[L] }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<!-- ============ COMMITMENTS ============ -->
+<section class="sec sec--ivory">
+  <div class="wrap">
+    <h2 class="h2 center reveal">{{ c.commitments_title[L] }}</h2>
+    <div class="commits">
+      {%- for cm in c.commitments %}<div class="commit reveal"><h3>{{ cm.title[L] }}</h3><p>{{ cm.text[L] }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section class="sec impact">
+  <div class="wrap">
+    <h2 class="h2 center reveal">{{ c.impact_title[L] }}</h2>
+    <div class="impacts">
+      {%- for im in c.impact %}<div class="imp imp--{{ forloop.index }} reveal"><h3>{{ im.title[L] }}</h3><p>{{ im.text[L] }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>
+
+{%- if c.clients and c.clients.size > 0 %}
+<section class="sec sec--ivory clients">
+  <div class="wrap">
+    <h2 class="h3 center">{{ c.ui.clients_title[L] }}</h2>
+    <div class="logos">{% for cl in c.clients %}<img src="{{ cl.logo }}" alt="{{ cl.name | escape }}" loading="lazy">{% endfor %}</div>
+  </div>
+</section>
+{%- endif %}
+{%- if c.testimonials and c.testimonials.size > 0 %}
+<section class="sec">
+  <div class="wrap">
+    <h2 class="h3 center">{{ c.ui.testimonials_title[L] }}</h2>
+    <div class="quotes">{% for q in c.testimonials %}<blockquote class="quote"><p>«{{ q.quote[L] }}»</p><cite>{{ q.author[L] }}</cite></blockquote>{% endfor %}</div>
+  </div>
+</section>
+{%- endif %}
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact__grid{% unless s.formspree_id and s.formspree_id != "" %} contact__grid--solo{% endunless %}">
+    <div class="contact__info reveal">
+      <img src="/assets/img/rose.svg" alt="" width="40" height="88" aria-hidden="true">
+      <h2 class="h2">{{ c.contact.title[L] }}</h2>
+      <p class="lead">{{ c.contact.text[L] }}</p>
+      {%- capture wa_gen %}{{ c.ui.wa_message[L] }}{% endcapture %}
+      <div class="contact__btns">
+        <a class="btn btn--gold btn--lg" href="https://wa.me/{{ s.whatsapp }}?text={{ wa_gen | strip | url_encode }}" target="_blank" rel="noopener">{{ c.ui.whatsapp[L] }} · {{ s.phone }}</a>
+        <a class="btn btn--ghost btn--lg" href="mailto:{{ s.email }}">{{ s.email }}</a>
+      </div>
+      <ul class="contact__list">
+        {%- if s.deck_pdf and s.deck_pdf != "" %}<li><a href="{{ s.deck_pdf }}" download>⤓ {{ c.ui.download_deck[L] }}</a></li>{% endif %}
+        <li><a href="{{ s.store_url }}">↗ {{ s.store_url | remove: "https://" }}</a></li>
+        <li><a href="{{ s.maps_url }}" target="_blank" rel="noopener">⌖ {{ s.address[L] }}</a></li>
+        {%- if s.phone2 and s.phone2 != "" %}<li><a href="tel:{{ s.phone2 }}">☏ {{ s.phone2 }}</a></li>{% endif %}
+      </ul>
+    </div>
+    {%- if s.formspree_id and s.formspree_id != "" %}
+    <form class="form reveal" id="leadForm" action="https://formspree.io/f/{{ s.formspree_id }}" method="POST" data-ok="{{ c.contact.f_success[L] | escape }}" data-err="{{ c.contact.f_error[L] | escape }}">
+      <input type="hidden" name="_subject" value="طلب شراكة جديد — saqaljori.sa ({{ L }})">
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+      <div class="form__row">
+        <label>{{ c.contact.f_name[L] }}<input name="name" required autocomplete="name"></label>
+        <label>{{ c.contact.f_org[L] }}<input name="organization" required autocomplete="organization"></label>
+      </div>
+      <div class="form__row">
+        <label>{{ c.contact.f_type[L] }}
+          <select name="type" id="segSelect">
+            {%- for seg in c.segments %}<option value="{{ seg.key }}">{{ seg.title[L] }}</option>{% endfor %}
+            <option value="other">{{ c.contact.f_other[L] }}</option>
+          </select></label>
+        <label>{{ c.contact.f_city[L] }}<input name="city" autocomplete="address-level2"></label>
+      </div>
+      <div class="form__row">
+        <label>{{ c.contact.f_phone[L] }}<input name="phone" type="tel" required autocomplete="tel" dir="ltr"></label>
+        <label>{{ c.contact.f_email[L] }}<input name="email" type="email" autocomplete="email" dir="ltr"></label>
+      </div>
+      <label>{{ c.contact.f_message[L] }}<textarea name="message" rows="4"></textarea></label>
+      <button class="btn btn--gold btn--lg btn--block" type="submit">{{ c.contact.f_submit[L] }}</button>
+      <p class="form__msg" role="status" aria-live="polite"></p>
+    </form>
+    {%- endif %}
+  </div>
+  <svg class="contact__mtn" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><path fill="#2C463C" opacity=".55" d="M0 110 L140 70 L250 100 L380 50 L520 105 L640 72 L770 110 L900 60 L1030 104 L1160 76 L1300 108 L1440 84 V160 H0Z"/><path fill="#1d2f28" d="M0 138 L90 124 L170 132 L260 120 L330 136 L420 118 L520 140 L610 126 L700 138 L790 120 L880 136 L980 124 L1080 140 L1170 128 L1260 138 L1350 122 L1440 134 V160 H0Z"/></svg>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap ftr__in">
+    <img src="/assets/img/logo-ondark.svg" alt="ساق الجوري" width="150" height="48">
+    <nav class="ftr__links">
+      <a href="{{ s.store_url }}">{{ c.ui.store[L] }}</a>
+      <a href="{{ s.instagram }}" target="_blank" rel="noopener">Instagram</a>
+      <a href="{{ s.tiktok }}" target="_blank" rel="noopener">TikTok</a>
+      <a href="mailto:{{ s.email }}">{{ s.email }}</a>
+      <a href="{{ other }}">{{ c.ui.lang_switch[L] }}</a>
+    </nav>
+    <p class="ftr__meta">© <span id="yr">2026</span> SAQ ALJORI · {{ c.ui.rights[L] }} · CR {{ s.cr }}</p>
+  </div>
+  <div class="qatt qatt--dark" aria-hidden="true"></div>
+</footer>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

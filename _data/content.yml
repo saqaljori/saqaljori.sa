@@ -1,0 +1,449 @@
+# محتوى صفحة الشراكات — يُعدّل من saqaljori.sa/admin (Pages CMS)
+seo:
+  title:
+    ar: ساق الجوري | شراكات الورد والهدايا وتنسيق المناسبات في عسير
+    en: SAQ ALJORI | Flowers, Gifts & Event Styling Partnerships in Asir
+  description:
+    ar: 'شريك الفنادق والجهات والمستشفيات والقاعات في أبها وعسير: اشتراكات ورد أسبوعية، هدايا كبار الزوار بالشعار، وتنسيق الفعاليات. نزرع ونصنع وننسّق بأيدينا.'
+    en: 'Partner to hotels, organizations, hospitals and venues in Abha and Asir: weekly flower subscriptions, branded VIP gifts and event styling. Grown, made and arranged by hand.'
+ui:
+  nav_services:
+    ar: الخدمات
+    en: Services
+  nav_packages:
+    ar: الباقات
+    en: Packages
+  nav_how:
+    ar: كيف نعمل
+    en: How it works
+  nav_contact:
+    ar: تواصل
+    en: Contact
+  store:
+    ar: المتجر
+    en: Shop
+  lang_switch:
+    ar: English
+    en: العربية
+  from:
+    ar: يبدأ من
+    en: From
+  currency:
+    ar: ر.س
+    en: SAR
+  monthly:
+    ar: شهرياً
+    en: / month
+  annual:
+    ar: بعقد سنوي
+    en: Annual contract
+  request_quote:
+    ar: اطلب عرضاً
+    en: Request a proposal
+  whatsapp:
+    ar: واتساب
+    en: WhatsApp
+  download_deck:
+    ar: حمّل ملف العرض PDF
+    en: Download the deck (PDF)
+  vat_note:
+    ar: الأسعار شاملة الضريبة وتُفصّل حسب كل منشأة بعد الزيارة.
+    en: Prices include VAT and are tailored to each venue after a site visit.
+  wa_message:
+    ar: السلام عليكم، أرغب في عرض شراكة مع ساق الجوري لـ
+    en: Hello, I would like a partnership proposal from SAQ ALJORI for
+  clients_title:
+    ar: جهات وثقت بنا
+    en: Trusted by
+  testimonials_title:
+    ar: قالوا عنا
+    en: What partners say
+  rights:
+    ar: جميع الحقوق محفوظة
+    en: All rights reserved
+hero:
+  eyebrow:
+    ar: من أبها · منذ 2020
+    en: From Abha · since 2020
+  title:
+    ar: شريككم في الورد والهدايا وتنسيق المناسبات في عسير
+    en: Your partner for flowers, gifts and event styling in Asir
+  subtitle:
+    ar: نزرع الورد في مزرعتنا، ونصنع الخشبيات في مصنعنا، وننسّق في محلنا بأبها. ونقدم للفنادق والجهات والمستشفيات والقاعات تجربة عسيرية لا تُنسى.
+    en: We grow flowers on our farm, make woodwork in our own workshop and arrange in our Abha shop, giving hotels, organizations, hospitals and venues an unforgettable Asiri experience.
+  cta_primary:
+    ar: اطلب عرض شراكة
+    en: Request a partnership proposal
+  cta_secondary:
+    ar: تسوّق من المتجر
+    en: Shop online
+  segments_label:
+    ar: نخدم
+    en: We serve
+  background: /assets/img/hero-mountains.jpg
+stats:
+- value:
+    ar: '2020'
+    en: '2020'
+  label:
+    ar: بدأنا ومستمرون
+    en: serving since
+- value:
+    ar: نفس اليوم
+    en: Same day
+  label:
+    ar: توصيل داخل أبها وخميس مشيط
+    en: delivery in Abha & Khamis Mushait
+- value:
+    ar: '3'
+    en: '3'
+  label:
+    ar: مزرعة ومصنع ومحل
+    en: farm, workshop and shop
+- value:
+    ar: '48'
+    en: '48'
+  label:
+    ar: ساعة لعرض مخصص لكم
+    en: hours to a tailored proposal
+about:
+  eyebrow:
+    ar: من نحن
+    en: About us
+  title:
+    ar: توأمٌ من أبها، وحلمٌ واحد يزهر
+    en: Twins from Abha, one blooming dream
+  text:
+    ar: 'بدأ عادل وعبدالله في 2020 من حساب صغير يوصّلان منه الورد بأيديهما. واليوم صار ساق الجوري محلاً في حي المنسك، ومزرعة يكبر فيها دوار الشمس، ومصنع خشبيات متكاملاً. لسنا وسيطاً: نتحكم في الجودة والمواعيد والتخصيص من البذرة حتى التسليم.'
+    en: 'Adel and Abdullah started in 2020 with a small account, delivering flowers by hand. Today SAQ ALJORI is a shop in Al-Manssak, a farm where our sunflowers grow, and a full woodwork workshop. We are not a reseller: we control quality, timing and customization from seed to delivery.'
+  pillars:
+  - title:
+      ar: من مزرعتنا
+      en: From our farm
+    text:
+      ar: ورد نزرعه ونقطفه بأيدينا.
+      en: Flowers we grow and pick by hand.
+    image: ''
+  - title:
+      ar: من مصنعنا
+      en: From our workshop
+    text:
+      ar: صناديق ولوحات وستاندات بشعاركم.
+      en: Boxes, signs and stands with your logo.
+    image: ''
+  - title:
+      ar: من محلنا في المنسك
+      en: From our Abha shop
+    text:
+      ar: تنسيق يومي وتوصيل في الموعد.
+      en: Daily arranging and on-time delivery.
+    image: ''
+segments_title:
+  ar: ما نقدمه لكل جهة
+  en: What we offer
+segments:
+- key: hotels
+  title:
+    ar: الفنادق والمنتجعات
+    en: Hotels & resorts
+  offers:
+  - ar: اشتراك ورد أسبوعي للوبي والاستقبال والمطاعم
+    en: Weekly flowers for lobby, reception and restaurants
+  - ar: باقات ترحيب لغرف كبار الضيوف والأجنحة
+    en: Welcome bouquets for VIP rooms and suites
+  - ar: '«كونسيرج الورد»: الضيف يطلب من الاستقبال والفاتورة شهرية'
+    en: '"Flower concierge": guests order via reception, billed monthly'
+  - ar: صندوق «أبها» التذكاري لمتجر الفندق
+    en: The "Abha in a box" keepsake for your gift shop
+  value:
+    ar: تجربة ضيف عسيرية أصيلة ودخل إضافي من هدايا النزلاء.
+    en: An authentic Asiri guest experience and extra revenue from guest gifts.
+  image: ''
+- key: government
+  title:
+    ar: الجهات الحكومية والشركات
+    en: Government & companies
+  offers:
+  - ar: 'هدايا كبار الزوار: صندوق خشبي محفور بالشعار مع ورد'
+    en: 'VIP gifts: engraved wooden box with flowers'
+  - ar: تنسيق المؤتمرات والملتقيات والافتتاحات
+    en: Styling for conferences, forums and openings
+  - ar: ورد دوري للمكاتب وقاعات الاجتماعات
+    en: Regular flowers for offices and meeting rooms
+  - ar: برنامج «تقدير» لهدايا الموظفين
+    en: '"Appreciation" employee gifting program'
+  value:
+    ar: هدايا تحمل هويتكم وهوية المنطقة، صُنعت محلياً، بفوترة رسمية.
+    en: Gifts carrying your identity and the region's, locally made, with formal invoicing.
+  image: ''
+- key: hospitals
+  title:
+    ar: المستشفيات
+    en: Hospitals
+  offers:
+  - ar: باقة «أهلاً بالمولود» لأجنحة الولادة
+    en: '"Welcome baby" gift for maternity wards'
+  - ar: هدايا تقدير الكوادر في يوم الطبيب والتمريض
+    en: Staff appreciation on Doctors' and Nurses' Days
+  - ar: مبادرة «وردة لكل محارب» لمرضى السرطان
+    en: '"A rose for every fighter" for cancer patients'
+  - ar: ورد قليل العطر وفق اشتراطات المستشفى
+    en: Low-scent flowers following hospital guidelines
+  value:
+    ar: لمسة إنسانية للمرضى وذويهم وتقدير للكوادر.
+    en: A human touch for patients and families, and appreciation for staff.
+  image: ''
+- key: venues
+  title:
+    ar: القاعات ومنظمو الفعاليات
+    en: Venues & event organizers
+  offers:
+  - ar: مورد ثابت للورد والكوش بأسعار شريك
+    en: Steady supply of flowers and backdrops at partner rates
+  - ar: أولوية الحجز في المواسم
+    en: Priority booking in peak seasons
+  - ar: تأجير ستاندات وأقواس من مصنعنا
+    en: Rental stands and arches from our workshop
+  - ar: تيجان الريحان للعرائس وعمولة على الإحالات
+    en: Rihan crowns for brides and referral commission
+  value:
+    ar: خدمة متكاملة ترفع قيمة باقاتكم، ومورد لا يعتذر في الموسم.
+    en: A complete service that lifts your packages and a supplier who never says no in season.
+  image: ''
+products_title:
+  ar: منتجات مميزة للجهات
+  en: Signature products
+products:
+- name:
+    ar: هدية كبار الزوار
+    en: VIP gift
+  desc:
+    ar: صندوق خشبي محفور بالشعار مع باقة السودة
+    en: Engraved wooden box with the Soudah bouquet
+  price: 349
+  image: ''
+- name:
+    ar: باقة تهنئة رسمية
+    en: Official congratulations
+  desc:
+    ar: جوري أبيض وهيدرانجيا بتغليف فاخر
+    en: White roses and hydrangea, luxury wrap
+  price: 239
+  image: /assets/img/bouquet-ivory.png
+- name:
+    ar: صندوق خشبي بالشعار
+    en: Logo wooden box
+  desc:
+    ar: من مصنعنا، يُحفر بشعار جهتكم
+    en: From our workshop, engraved with your logo
+  price: 189
+  image: ''
+- name:
+    ar: هدية تقدير موظف
+    en: Employee appreciation
+  desc:
+    ar: باقة «قطفة» مع بطاقة باسم الجهة
+    en: '"Qatfa" bouquet with a branded card'
+  price: 99
+  image: /assets/img/bouquet-black.png
+events_from:
+  text:
+    ar: تنسيق الفعاليات والكوش
+    en: Event & backdrop styling
+  price: 3550
+packages_title:
+  ar: باقات الاشتراك الشهري
+  en: Monthly subscriptions
+packages:
+- name:
+    ar: ضباب
+    en: Dabab
+  tag:
+    ar: أساسية
+    en: Essential
+  monthly: 2400
+  annual: 2200
+  featured: false
+  features:
+  - ar: تنسيق لوبي كبير أسبوعياً
+    en: One large lobby arrangement weekly
+  - ar: استبدال مجاني لأي تنسيق يذبل
+    en: Free replacement of any wilting arrangement
+  - ar: فاتورة شهرية
+    en: Monthly invoice
+- name:
+    ar: السودة
+    en: Al-Soudah
+  tag:
+    ar: الأكثر طلباً
+    en: Most popular
+  monthly: 6150
+  annual: 5550
+  featured: true
+  features:
+  - ar: لوبي + 2 استقبال + 4 طاولات أسبوعياً
+    en: Lobby + 2 reception + 4 table pieces weekly
+  - ar: أسعار خاصة لهدايا كبار الزوار
+    en: Special rates on VIP gifts
+  - ar: أولوية المواسم ومدير حساب
+    en: Seasonal priority and an account manager
+- name:
+    ar: عسير
+    en: Asir
+  tag:
+    ar: شاملة
+    en: Complete
+  monthly: 13000
+  annual: 11700
+  featured: false
+  features:
+  - ar: 2 لوبي + 4 استقبال + 10 طاولات أسبوعياً
+    en: 2 lobby + 4 reception + 10 table pieces weekly
+  - ar: تنسيق الفعاليات بأسعار تعاقدية
+    en: Event styling at contract rates
+  - ar: خشبيات وبطاقات بالشعار ومراجعة ربعية
+    en: Branded woodwork and cards, quarterly review
+process_title:
+  ar: كيف نبدأ معكم؟
+  en: How we start
+process:
+- title:
+    ar: اجتماع تعارف
+    en: Intro call
+  text:
+    ar: 15 دقيقة لفهم احتياجكم
+    en: 15 minutes to understand your needs
+- title:
+    ar: زيارة الموقع
+    en: Site visit
+  text:
+    ar: نحدد نقاط التنسيق والمقاسات
+    en: We map arrangement points and sizes
+- title:
+    ar: عرض مخصص
+    en: Tailored proposal
+  text:
+    ar: خلال 48 ساعة بالتصاميم والأسعار
+    en: Designs and pricing within 48 hours
+- title:
+    ar: أسبوع تجريبي
+    en: Trial week
+  text:
+    ar: تشاهدون الجودة قبل التوقيع
+    en: See the quality before you sign
+- title:
+    ar: اتفاقية وفوترة
+    en: Agreement
+  text:
+    ar: عقد واضح وفاتورة شهرية
+    en: Clear contract, monthly invoice
+- title:
+    ar: متابعة ومراجعة
+    en: Ongoing care
+  text:
+    ar: تقييم ربعي وتحديث موسمي
+    en: Quarterly review, seasonal refresh
+commitments_title:
+  ar: التزاماتنا معكم
+  en: Our commitments
+commitments:
+- title:
+    ar: الموعد
+    en: On time
+  text:
+    ar: نلتزم بمواعيد التركيب والتوصيل ونبلغكم مسبقاً بأي ظرف.
+    en: We keep setup and delivery times and notify you of anything in advance.
+- title:
+    ar: الجودة
+    en: Quality
+  text:
+    ar: أي تنسيق يذبل قبل موعده نستبدله مجاناً في نفس اليوم.
+    en: Any arrangement that wilts early is replaced free the same day.
+- title:
+    ar: التواصل
+    en: One contact
+  text:
+    ar: مدير حساب واحد ورقم واتساب أعمال.
+    en: One account manager and a business WhatsApp line.
+- title:
+    ar: الشفافية
+    en: Transparency
+  text:
+    ar: أسعار ثابتة طوال العقد وفاتورة مفصّلة.
+    en: Fixed prices for the contract term, detailed invoices.
+- title:
+    ar: السرية
+    en: Privacy
+  text:
+    ar: بيانات ضيوفكم لا تُستخدم ولا تُنشر، ولا نصوّر إلا بإذنكم.
+    en: Guest data is never used or shared; no photos without consent.
+- title:
+    ar: المرونة
+    en: Flexibility
+  text:
+    ar: نعدّل الكميات والتصاميم حسب المواسم والفعاليات.
+    en: Quantities and designs adapt to seasons and events.
+impact_title:
+  ar: شراكة لها أثر في عسير
+  en: A partnership with local impact
+impact:
+- title:
+    ar: صُنع في عسير
+    en: Made in Asir
+  text:
+    ar: ورد من مزرعتنا وخشبيات من مصنعنا في أبها.
+    en: Flowers from our farm and woodwork from our Abha workshop.
+- title:
+    ar: تراث حي
+    en: Living heritage
+  text:
+    ar: نعيد تقديم الإكليل العسيري وألوان القط في منتجات اليوم.
+    en: We bring the Asiri garland and Qatt colours into today's products.
+- title:
+    ar: عطاء صادق
+    en: Genuine giving
+  text:
+    ar: «وردة لكل محارب» لمرضى السرطان في يوم الوردة العالمي.
+    en: '"A rose for every fighter" for cancer patients on World Rose Day.'
+clients: []
+testimonials: []
+contact:
+  title:
+    ar: لنصنع لضيوفكم لحظة لا تُنسى
+    en: Let's create an unforgettable moment for your guests
+  text:
+    ar: أخبرونا عن جهتكم، ونرد خلال ساعتي عمل بموعد للزيارة واقتراح أولي.
+    en: Tell us about your organization and we'll reply within two working hours with a visit time and first ideas.
+  f_name:
+    ar: الاسم
+    en: Name
+  f_org:
+    ar: الجهة
+    en: Organization
+  f_type:
+    ar: نوع الجهة
+    en: Type
+  f_city:
+    ar: المدينة
+    en: City
+  f_phone:
+    ar: الجوال
+    en: Mobile
+  f_email:
+    ar: البريد الإلكتروني
+    en: Email
+  f_message:
+    ar: ماذا تحتاجون؟
+    en: What do you need?
+  f_submit:
+    ar: أرسل الطلب
+    en: Send request
+  f_success:
+    ar: وصلنا طلبكم، وسنتواصل معكم قريباً. شكراً لكم.
+    en: Thank you! We received your request and will be in touch shortly.
+  f_error:
+    ar: تعذّر الإرسال. راسلونا على واتساب من فضلكم.
+    en: Sending failed. Please message us on WhatsApp.
+  f_other:
+    ar: أخرى
+    en: Other
